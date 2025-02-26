@@ -8,9 +8,7 @@
 
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header class="cabechalho">
@@ -37,19 +35,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Horas</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- ==================== FONTS ======================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
         <h2>Registro de Horas</h2>
         
-        <label for="date">Data:</label>
-        <input type="date" id="date">
-        
-        <label for="start-time">Hora de Início:</label>
-        <input type="time" id="start-time">
-        
-        <label for="end-time">Hora de Saída:</label>
-        <input type="time" id="end-time">
+        <div class="data-horas">
+            <div class="horas">
+                <label for="date">Data:</label>
+                <input type="date" id="date">
+            </div>
+            <div class="horas">
+                <label for="start-time">Hora de Início:</label>
+                <input type="time" id="start-time">
+            </div>
+            <div class="horas">
+                <label for="end-time">Hora de Saída:</label>
+                <input type="time" id="end-time">
+            </div>
+        </div>
         
         <label for="total-time">Total de Horas:</label>
         <input type="text" id="total-time" readonly>
