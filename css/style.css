@@ -39,8 +39,9 @@ body {
         box-shadow: 2px 2px 21px 1px #252525a9;
         width: 30%;
 
-        & h2{
+        & .logo{
             color: #ffffff;
+            font-weight: 100;
         }
 
 
@@ -48,6 +49,7 @@ body {
             display: flex;
             justify-content: space-around;
             gap: 5px;
+            margin-top: 15px;
             & .horas {
                 width: 100%;
                 
@@ -56,6 +58,7 @@ body {
                     font-size: 18px;
                     font-weight: bold;
                     color: var(--cor_text_btn);
+                    
                 }
 
                 & input{
