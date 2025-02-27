@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+:root{
+    --borda-Btn: #1E917C;
+    --cor_text_btn: #11C48C;
+
+    --background-btn: #1F394A;
+    --background-container: #212B46;
+
+    --background-btn-excluir: #FFF0F3;
+    --cor-bord-btn: #DD4C79;
+
+    --background-menu: #212226;
+}
+
+
 body {
     height: 100vh;
     font-family: Arial, sans-serif;
