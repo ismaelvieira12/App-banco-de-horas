@@ -15,10 +15,10 @@ document.getElementById('date').valueAsDate = new Date();
                     let totalMinutes = endTotalMinutes - startTotalMinutes;
                     let hours = Math.floor(totalMinutes / 60);
                     let minutes = totalMinutes % 60;
-                    document.getElementById('total-time').value = `${hours}h ${minutes}m`;
+                    document.getElementById('total-time').innerHTML = `<h4> ${hours}h ${minutes}m </h4>`;
                 } else {
                     alert('teste');
-                    document.getElementById('total-time').value = "Horário inválido";
+                    document.getElementById('total-time').innerHTML = "Horário inválido";
                 }
             }
         }
