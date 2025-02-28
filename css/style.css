@@ -170,3 +170,10 @@ input, textarea {
       }
     }
 }
+
+
+@media(max-width: 884px){
+    & .main{
+        width: 70%;
+    }
+}
