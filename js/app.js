@@ -66,3 +66,11 @@ document.getElementById('date').valueAsDate = new Date();
                 button: "Ok"
             });
         }
+
+const hamburBtn = document.querySelector('.menu-hamburguer');
+const boxMenu = document.querySelector('.menu-inline');
+
+hamburBtn.addEventListener('click', () => {
+    boxMenu.classList.add('box-menu');
+    hamburBtn.style.display='none';
+})
