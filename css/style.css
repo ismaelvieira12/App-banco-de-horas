@@ -153,24 +153,28 @@ input, textarea {
         justify-content: center;
         align-items: center;
 
-        width: 90%;
+        width: 90% !important;
         height: 90%;
         
-        & label{
-            color: #ffffff;
-            text-align: justify;
+        & .data-horas {
             width: 100%;
+
+            & label{
+                color: #ffffff;
+                text-align: justify;
+                width: 100%;
+            }
+        
+            & input, textarea{
+                width: 100%;
+            }
         }
-    
-        & input, textarea{
-            width: 100%;
-        }
-      }
+    }
     
 }
 
 
-@media(max-width: 884px){
+/* @media(max-width: 884px){
     & .main{
         width: 70%;
     }
@@ -186,4 +190,4 @@ input, textarea {
     & .main{
         width: 60%;
     }
-}
+} */
