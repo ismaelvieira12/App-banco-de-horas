@@ -16,7 +16,10 @@ document.getElementById('date').valueAsDate = new Date();
                     let minutes = totalMinutes % 60;
                     document.getElementById('total-time').innerHTML = `<h4> ${hours}h ${minutes}m </h4>`;
                 } else {
-                    document.getElementById('total-time').innerHTML = "Horário inválido";
+                    const texterror = document.getElementById('total-time');
+                    texterror.style.color="#FA4000";
+                    texterror.style.font='bold';
+                    texterror.innerHTML = "Horário inválido";
                 }
             }
         }
@@ -34,12 +37,22 @@ document.getElementById('date').valueAsDate = new Date();
             const notes = document.getElementById('notes').value;
             
             if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
-                alert("Por favor, preencha os horários corretamente.");
+                swal({
+                    title: "Erro!",
+                    text: "Por favor, preencha os horários corretamente.",
+                    icon: "error",
+                    button: "voltar",
+                  });
                 return;
             }
             
             if (savedData.some(entry => entry.date === date)) {
-                alert("Já existe um registro para essa data. Exclua os dados anteriores antes de cadastrar um novo horário.");
+                swal({
+                    title: "Atenção!",
+                    text: "Já existe um registro para essa data.",
+                    icon: "warning",
+                    button: "Ok"
+                });
                 return;
             }
             
@@ -47,6 +60,9 @@ document.getElementById('date').valueAsDate = new Date();
             const entry = { date, startTime, endTime, totalTime, notes };
             savedData.push(entry);
             console.log("Dados salvos:", savedData);
-            alert("Dados salvos com sucesso!");
-        
+            swal({
+                title: "Dados salvos com sucesso!",
+                icon: "success",
+                button: "Ok"
+            });
         }
