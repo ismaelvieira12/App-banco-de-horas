@@ -30,10 +30,10 @@ document.getElementById('date').valueAsDate = new Date();
             const date = document.getElementById('date').value;
             const startTime = document.getElementById('start-time').value;
             const endTime = document.getElementById('end-time').value;
-            const totalTime = document.getElementById('total-time').value;
+            const totalTime = document.getElementById('total-time').innerText.trim(); // o innerText.trim() serve para pegar os dados da div ou span
             const notes = document.getElementById('notes').value;
             
-            if (!startTime || !endTime || totalTime === "Horário inválido") {
+            if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
                 alert("Por favor, preencha os horários corretamente.");
                 return;
             }
@@ -43,12 +43,10 @@ document.getElementById('date').valueAsDate = new Date();
                 return;
             }
             
-            if(totalTime == undefined){
-                calculateTotalTime();
-            } else{
-                const entry = { date, startTime, endTime, totalTime, notes };
-                savedData.push(entry);
-                console.log("Dados salvos:", savedData);
-                alert("Dados salvos com sucesso!");
-            }
+           
+            const entry = { date, startTime, endTime, totalTime, notes };
+            savedData.push(entry);
+            console.log("Dados salvos:", savedData);
+            alert("Dados salvos com sucesso!");
+        
         }
