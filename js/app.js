@@ -17,6 +17,7 @@ document.getElementById('date').valueAsDate = new Date();
                     let minutes = totalMinutes % 60;
                     document.getElementById('total-time').value = `${hours}h ${minutes}m`;
                 } else {
+                    alert('teste');
                     document.getElementById('total-time').value = "Horário inválido";
                 }
             }

@@ -158,10 +158,11 @@ input, textarea {
         
         & .data-horas {
             width: 100%;
-
+            flex-direction: column;
+            
+            
             & label{
-                color: #ffffff;
-                text-align: justify;
+                text-align: justify !important;
                 width: 100%;
             }
         
@@ -174,20 +175,8 @@ input, textarea {
 }
 
 
-/* @media(max-width: 884px){
-    & .main{
-        width: 70%;
-    }
-}
-
-@media(max-width: 1114px){
-    & .main{
-        width: 90%;
-    }
-}
-
 @media(max-width: 1280px){
     & .main{
         width: 60%;
     }
-} */
+} 
