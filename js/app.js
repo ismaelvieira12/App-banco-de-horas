@@ -3,7 +3,6 @@ document.getElementById('date').valueAsDate = new Date();
         function calculateTotalTime() {
             const startTime = document.getElementById('start-time').value;
             const endTime = document.getElementById('end-time').value;
-            
             if (startTime && endTime) {
                 const [startHour, startMinute] = startTime.split(':').map(Number);
                 const [endHour, endMinute] = endTime.split(':').map(Number);
@@ -17,7 +16,6 @@ document.getElementById('date').valueAsDate = new Date();
                     let minutes = totalMinutes % 60;
                     document.getElementById('total-time').innerHTML = `<h4> ${hours}h ${minutes}m </h4>`;
                 } else {
-                    alert('teste');
                     document.getElementById('total-time').innerHTML = "Horário inválido";
                 }
             }
@@ -45,8 +43,12 @@ document.getElementById('date').valueAsDate = new Date();
                 return;
             }
             
-            const entry = { date, startTime, endTime, totalTime, notes };
-            savedData.push(entry);
-            console.log("Dados salvos:", savedData);
-            alert("Dados salvos com sucesso!");
+            if(totalTime == undefined){
+                calculateTotalTime();
+            } else{
+                const entry = { date, startTime, endTime, totalTime, notes };
+                savedData.push(entry);
+                console.log("Dados salvos:", savedData);
+                alert("Dados salvos com sucesso!");
+            }
         }

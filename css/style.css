@@ -61,7 +61,7 @@ body {
                 }
 
                 & label{
-                    font-size: 18px;
+                    font-size: 17px;
                     font-weight: bold;
                     color: var(--cor_text_btn);
                 }
@@ -94,11 +94,20 @@ body {
             }
 
             & #total-time{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 5px; 
+
                 height: 50px;
-                width: 100px;
+                width: 150px;
                 background-color: #ffffff;
                 border-radius: 5px;
                 
+                & h4{
+                    font-size: 30px;
+                    color: var(--background-btn);
+                }
             }
         }
         
@@ -173,6 +182,15 @@ input, textarea {
                 width: 100%;
             }
         }
+
+    
+        & #total-time {
+            & h4 {
+                font-size: 20px !important;
+                color: var(--background-btn);
+            }
+        }
+    
     }
     
 }
