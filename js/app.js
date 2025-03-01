@@ -73,7 +73,6 @@ const closedMenu = document.querySelector('.x');
 const menuEl = document.querySelector('.menu')
 hamburBtn.addEventListener('click', () => {
     menuEl.classList.add('menu-speed');
-    menuEl.classList.remove('menu-out');
     boxMenu.classList.add('box-menu');
     hamburBtn.style.display='none';
     closedMenu.style.display="block";

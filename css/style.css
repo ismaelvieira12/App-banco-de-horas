@@ -225,6 +225,19 @@ body {
             z-index: 1;
             top: 0;
             
+            display: flex;
+            & .bd{
+                position: relative;
+
+                width: 100px;
+                height: 100px;
+                background-color: var(--background-btn-excluir);
+    
+                &:nth-child(2){
+                    margin-left: 30px;
+                }
+            }
+            
         }
         .menu-speed{
             animation: menu-speed 0.08s ease-in-out forwards;
