@@ -41,8 +41,8 @@ document.getElementById('date').valueAsDate = new Date();
                     title: "Erro!",
                     text: "Por favor, preencha os horários corretamente.",
                     icon: "error",
-                    button: "voltar",
-                  });
+                    button: "Voltar",
+                });
                 return;
             }
             
@@ -69,8 +69,15 @@ document.getElementById('date').valueAsDate = new Date();
 
 const hamburBtn = document.querySelector('.menu-hamburguer');
 const boxMenu = document.querySelector('.menu-inline');
-
+const closedMenu = document.querySelector('.x');
 hamburBtn.addEventListener('click', () => {
     boxMenu.classList.add('box-menu');
     hamburBtn.style.display='none';
+    closedMenu.style.display="block";
+});
+
+closedMenu.addEventListener('click', () => {
+    boxMenu.classList.remove('box-menu');
+    closedMenu.style.display="none";
+    hamburBtn.style.display="flex";
 })
