@@ -340,7 +340,7 @@ input, textarea {
     
     #banco-dado{
         width: 50% !important;
-        max-width: 500px; /* Ajusta para não ficar muito grande */
+        max-width: 500px; 
         height: 67% !important;
     }
 }
@@ -362,12 +362,12 @@ input, textarea {
     }
     #banco-dado {
         width: 500px !important;
-        max-width: 500px;/* Ajusta para não ficar muito grande */
+        max-width: 500px;
         height: 500px !important;
     }
 }
 
-@media(max-width: 440px){
+@media (max-width: 440px){
    
     .main{
         display: flex;
@@ -419,11 +419,11 @@ input, textarea {
                 }
             }
         }
-        #banco-dado {
-            width: 250px !important;
-            max-width: 500px;
-            height: 250px !important;
-        }
+            
+    }
+    #banco-dado {
+        width: 348px !important;
+        height: 655px !important;
     }
     
 }
