@@ -74,7 +74,7 @@ const boxMenu = document.querySelector('.menu-inline');
 const closedMenu = document.querySelector('.x');
 const menuEl = document.querySelector('.menu');
 const iconSapn = document.querySelector('.bd');
-const h5 = document.createElement('h5');
+const h5 = document.createElement('p');
 hamburBtn.addEventListener('click', () => {
     menuEl.classList.add('menu-speed');
     boxMenu.classList.add('box-menu');

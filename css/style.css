@@ -273,8 +273,6 @@ body {
         border-radius: 10px;
         box-shadow: 2px 2px 21px 1px #252525a9;
         overflow-x: hidden;
-        width: 26%;
-        height: 55%;
         /* right: 10%; */
         display: none;
 
@@ -297,6 +295,22 @@ body {
                     color: var(--borda-Btn);
                     cursor: pointer;
 
+                }
+            }
+        }
+
+        & .container{
+            /* background-color: #1E917C; */
+            width: 100%;
+
+            & .box-text-banco{
+                width: 200px;
+                height: 136px;
+                background-color: #11C48C;
+                border-radius: 5px;
+
+                &:hover{
+                    background-color: #1E917C;
                 }
             }
         }
