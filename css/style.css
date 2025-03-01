@@ -216,7 +216,7 @@ body {
         .menu {
             width: 100%;
             height: 100%;
-            background-color: #1e917cd2;
+            background-color: #1e917c;
             border-top-right-radius: 10px;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -299,7 +299,20 @@ input, textarea {
                 color: var(--background-btn);
             }
         }
-    
+
+        & .box-menu {
+            & .menu {
+                & .bd {
+                    position: relative;
+                    width: 140px;
+                    height: 100px;
+                    background-color: var(--background-btn-excluir);
+                    margin-right: 10px;
+                    border-radius: 10px;
+                    margin-top: 100px;
+                }
+            }
+        }
     }
     
 }
