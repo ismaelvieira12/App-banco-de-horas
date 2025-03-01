@@ -256,7 +256,8 @@ body {
                     cursor: pointer;
                 }
                 &:hover{
-                    
+                    animation: data 2s ease-in-out forwards;
+                    cursor: pointer;
                 }
             }
             
@@ -276,6 +277,11 @@ body {
     }
 } 
 
+@keyframes data {
+    0%{
+        margin-bottom: 30px;
+    }
+}
     
 
 label, input, textarea, button {
