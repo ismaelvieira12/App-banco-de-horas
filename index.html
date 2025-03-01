@@ -8,6 +8,9 @@
 
     <!-- ================= CDN ================== -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- ================= CDN FontAwesome ============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="main">
@@ -44,16 +47,14 @@
         <label for="notes">Observações:</label>
         <textarea id="notes" maxlength="255"></textarea>
         
-        <button onclick="saveData()" id="btn">Salvar</button>
         <div class="menu-inline">
             <span class="x"></span>
             <div class="menu">
-                <div class="bd">
-                    <img src="icons8-banco-de-dados-60.png" alt="teste">
-                </div>
-                <div class="bd"></div>
+                <span class="bd"></span>
+                <span class="bd"></span>
             </div>
         </div>
+        <button onclick="saveData()" id="btn">Salvar</button>
     </div>
 
 
