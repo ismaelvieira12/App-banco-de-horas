@@ -80,7 +80,7 @@ hamburBtn.addEventListener('click', () => {
     closedMenu.style.display="block";
 
     iconSapn.innerHTML = '<i class="fa-solid fa-database"></i>';
-    h5.innerText = "Banco de HORAS";
+    h5.innerText = "Banco de horas";
     iconSapn.appendChild(h5);
         
   
