@@ -100,4 +100,14 @@ closedMenu.addEventListener('click', () => {;
 
 document.querySelector('#banco-ancora').addEventListener('click', () => {
     document.getElementById('banco-dado').style.display="block";
+    document.querySelector('.main').style.display="none";
+});
+
+// Criando uma ancora para voltar para Página inicial
+document.getElementById('home').addEventListener('click', () => {
+    document.getElementById('banco-dado').style.display="none";
+    document.querySelector('.main').style.display="block";
+    boxMenu.classList.remove('box-menu');
+    hamburBtn.style.display="flex";
+    iconSapn.innerHTML = '';
 })

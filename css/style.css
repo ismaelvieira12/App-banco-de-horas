@@ -42,7 +42,6 @@ body {
         border-radius: 10px;
         box-shadow: 2px 2px 21px 1px #252525a9;
         overflow-x: hidden; /* Evita scroll horizontal */
-
         & .box-nav{
             /* background-color: #11c48b; */
             display: flex;
@@ -276,7 +275,7 @@ body {
         overflow-x: hidden;
         width: 26%;
         height: 55%;
-        right: 10%;
+        /* right: 10%; */
         display: none;
 
         & .box-menu-banco{
@@ -286,13 +285,19 @@ body {
             & .logo{
                 color: var(--cor_text_btn);
                 font-family: "Moon Dance", cursive;
-                font-size: 30px;
+                font-size: 20px;
                 font-weight: bold;
                 font-style: normal;
                 text-transform: uppercase;
             }
             & .home{
-                width: 30px;
+                font-size: 20px;
+                color: var(--cor_text_btn);
+                &:hover{
+                    color: var(--borda-Btn);
+                    cursor: pointer;
+
+                }
             }
         }
     }
