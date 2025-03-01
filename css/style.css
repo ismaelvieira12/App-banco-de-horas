@@ -322,6 +322,51 @@ input, textarea {
     padding: 5px;
 }
 
+@media (min-width: 884px) { 
+    .main {
+        width: 80% !important; /* Mantém o layout desejado */
+        max-width: 500px; /* Ajusta para não ficar muito grande */
+    }
+    
+    .data-horas {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .data-horas .horas {
+        width: 100%;
+    }
+    
+    #banco-dado{
+        width: 50% !important;
+        max-width: 500px; /* Ajusta para não ficar muito grande */
+        height: 67% !important;
+    }
+}
+
+@media (max-width: 884px) { 
+    .main {
+        width: 80% !important; /* Mantém o layout desejado */
+        max-width: 500px; /* Ajusta para não ficar muito grande */
+    }
+
+    .data-horas {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .data-horas .horas {
+        width: 100%;
+    }
+    #banco-dado {
+        width: 500px !important;
+        max-width: 500px;/* Ajusta para não ficar muito grande */
+        height: 500px !important;
+    }
+}
+
 @media(max-width: 440px){
    
     .main{
@@ -374,40 +419,11 @@ input, textarea {
                 }
             }
         }
+        #banco-dado {
+            width: 250px !important;
+            max-width: 500px;
+            height: 250px !important;
+        }
     }
     
 }
-@media (min-width: 884px) { 
-    .main {
-        width: 80% !important; /* Mantém o layout desejado */
-        max-width: 500px; /* Ajusta para não ficar muito grande */
-    }
-
-    .data-horas {
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
-    }
-
-    .data-horas .horas {
-        width: 100%;
-    }
-}
-
-@media (max-width: 884px) { 
-    .main {
-        width: 80% !important; /* Mantém o layout desejado */
-        max-width: 500px; /* Ajusta para não ficar muito grande */
-    }
-
-    .data-horas {
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
-    }
-
-    .data-horas .horas {
-        width: 100%;
-    }
-}
-
