@@ -227,7 +227,7 @@ body {
             
         }
         .menu-speed{
-            animation: menu-speed 1s ease-in-out forwards;
+            animation: menu-speed 0.08s ease-in-out forwards;
         }
     }
 }
