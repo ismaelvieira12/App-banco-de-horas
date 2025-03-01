@@ -232,29 +232,10 @@ body {
 
 @keyframes menu-speed {
     0% {
-        transform: rotate(90deg);
-        top: 0;
-        right: -100%; /* Inicia fora do container */
+        right: -500px;
     }
-    25% {
-        transform: rotate(45deg);
-        top: 0;
-        right: -75%;
-    }
-    50% {
-        transform: rotate(25deg);
-        top: 0;
-        right: -50%;
-    }
-    75% {
-        transform: rotate(10deg);
-        top: 0;
-        right: -25%;
-    }
-    100% {
-        transform: rotate(0deg);
-        top: 0;
-        right: 0; /* Fica visível */
+    100%{
+        right: 0px;
     }
 }
 label, input, textarea, button {
