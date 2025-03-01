@@ -255,9 +255,9 @@ body {
                     color: var(--background-container);
                     cursor: pointer;
                 }
+                
                 &:hover{
-                    animation: data 2s ease-in-out forwards;
-                    cursor: pointer;
+                    transform: scale(1.1);
                 }
             }
             
@@ -266,7 +266,39 @@ body {
             animation: menu-speed 0.08s ease-in-out forwards;
         }
     }
+
+    & #banco-dado{
+        position: absolute;
+        background-color: var(--background-container);
+        padding: 35px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 21px 1px #252525a9;
+        overflow-x: hidden;
+        width: 26%;
+        height: 55%;
+        right: 10%;
+        display: none;
+
+        & .box-menu-banco{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            & .logo{
+                color: var(--cor_text_btn);
+                font-family: "Moon Dance", cursive;
+                font-size: 30px;
+                font-weight: bold;
+                font-style: normal;
+                text-transform: uppercase;
+            }
+            & .home{
+                width: 30px;
+            }
+        }
+    }
 }
+
+
 
 @keyframes menu-speed {
     0% {
@@ -276,14 +308,6 @@ body {
         right: 0px;
     }
 } 
-
-@keyframes data {
-    0%{
-        margin-bottom: 30px;
-    }
-}
-    
-
 label, input, textarea, button {
     display: block;
     margin-top: 10px;
