@@ -72,6 +72,7 @@ const boxMenu = document.querySelector('.menu-inline');
 const closedMenu = document.querySelector('.x');
 const menuEl = document.querySelector('.menu');
 const iconSapn = document.querySelector('.bd');
+const h5 = document.createElement('h5');
 hamburBtn.addEventListener('click', () => {
     menuEl.classList.add('menu-speed');
     boxMenu.classList.add('box-menu');
@@ -79,6 +80,10 @@ hamburBtn.addEventListener('click', () => {
     closedMenu.style.display="block";
 
     iconSapn.innerHTML = '<i class="fa-solid fa-database"></i>';
+    h5.innerText = "Banco de HORAS";
+    iconSapn.appendChild(h5);
+        
+  
 });
 
 closedMenu.addEventListener('click', () => {;
