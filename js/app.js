@@ -70,14 +70,17 @@ document.getElementById('date').valueAsDate = new Date();
 const hamburBtn = document.querySelector('.menu-hamburguer');
 const boxMenu = document.querySelector('.menu-inline');
 const closedMenu = document.querySelector('.x');
+const menuEl = document.querySelector('.menu')
 hamburBtn.addEventListener('click', () => {
+    menuEl.classList.add('menu-speed');
+    menuEl.classList.remove('menu-out');
     boxMenu.classList.add('box-menu');
     hamburBtn.style.display='none';
     closedMenu.style.display="block";
 });
 
-closedMenu.addEventListener('click', () => {
-    boxMenu.classList.remove('box-menu');
+closedMenu.addEventListener('click', () => {;
     closedMenu.style.display="none";
+    boxMenu.classList.remove('box-menu');
     hamburBtn.style.display="flex";
 })
