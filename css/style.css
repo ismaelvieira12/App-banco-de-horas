@@ -305,16 +305,55 @@ body {
 
             & .box-text-banco{
                 width: 200px;
-                height: 136px;
-                background-color: #11C48C;
+                /* height: 136px; */
+                /* border:1px solid  #11C48C; */
+                background-color: #ffffff;
                 border-radius: 5px;
 
+                & .motivo{
+                    /* background-color: #11c48bb0; */
+                    & p{
+                        border:1px solid  #11C48C;
+                        margin: auto;
+                        border-radius: 5px;
+                        font-weight: bold;
+                    }
+                }
+                & p{
+                    color: var(--background-menu);
+                    font-size: 14px;
+                    margin: 0px 0px 0px 5px;
+                }
                 &:hover{
-                    background-color: #1E917C;
+                    /* background-color: #1E917C; */
                 }
             }
         }
     }
+}
+
+/* Faz a barra de rolagem mais fina */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra vertical */
+    height: 100px; /* Altura da barra horizontal */
+}
+
+/* Personaliza o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: var(--background-container); /* Cor do fundo da barra */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Personaliza a "alça" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: var(--cor_text_btn); /* Cor da alça */
+    border-radius: 5px;
+}
+
+/* Altera a cor quando o usuário passa o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--borda-Btn);
 }
 
 
@@ -438,6 +477,12 @@ input, textarea {
     #banco-dado {
         width: 348px !important;
         height: 655px !important;
+
+        & .container {
+            & .box-text-banco {
+                width: 100% !important; 
+            }
+        }
     }
     
 }
