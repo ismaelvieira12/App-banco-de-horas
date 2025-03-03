@@ -304,28 +304,51 @@ body {
             width: 100%;
             overflow-x: hidden; /* Evita scroll horizontal */
             
-            & .box-text-banco{
-                /* height: 136px; */
-                /* border:1px solid  #11C48C; */
-                background-color: #ffffff;
-                border-radius: 5px;
+            & .col-12{
+                background-color: #212226;
+                height: 200px;
 
-                & .motivo{
-                    /* background-color: #11c48bb0; */
-                    & p{
-                        border:1px solid  #11C48C;
+                & .box-text-banco{
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                    height: 100%;
+
+                    & .text-info{
+                        width: 100%;
+
+                        & p{
+                            margin-right: 50px;
+                        }
+                    }
+
+                    & .motivo{
+                        background-color: #11c48b5d;
+                        /* border:1px solid  #11c48b5d; */
+                        width: 97%;
                         margin: auto;
                         border-radius: 5px;
-                        font-weight: bold;
+    
+                        & p{
+                            margin-left: 5px;
+                            font-weight: bold;
+                            color: #1F394A;
+                        }
+                        & .text-motivo{
+                            font-weight: normal;
+                            font-size: 11px;
+                            text-align: justify;
+                            width: 100%;
+                            padding: 0px 15px 0px 0px;
+                        }
                     }
-                }
-                & p{
-                    color: var(--background-menu);
-                    font-size: 14px;
-                    margin: 0px 0px 0px 5px;
-                }
-                &:hover{
-                    /* background-color: #1E917C; */
+                    & p{
+                        color: var(--background-menu);
+                        font-size: 14px;
+                        margin: 0px 0px 0px 5px;
+                    }
+                    &:hover{
+                        /* background-color: #1E917C; */
+                    }
                 }
             }
         }
