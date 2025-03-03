@@ -82,9 +82,9 @@ function populandoData(savedData){
     newBox.innerHTML = `
         <div class="box-text-banco">
             <div class="text-info">
-                <p>DIA:<span>${savedData[0].date}</span></p>
-                <p>Entrada:<span> ${savedData[0].startTime}</span></p>
-                <p>Saída:<span> ${savedData[0].endTime}</span></p>
+                <p>DIA:</p><span>${savedData[0].date}</span>
+                <p>Entrada:</p><span> ${savedData[0].startTime}</span>
+                <p>Saída:</p><span> ${savedData[0].endTime}</span>
             </div>
             <div class="motivo">
                 <p>Motivo:</p>
