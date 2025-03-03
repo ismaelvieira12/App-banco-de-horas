@@ -294,17 +294,16 @@ body {
                 &:hover{
                     color: var(--borda-Btn);
                     cursor: pointer;
-
+                    
                 }
             }
         }
-
+        
         & .container{
             /* background-color: #1E917C; */
             width: 100%;
-
+            
             & .box-text-banco{
-                width: 200px;
                 /* height: 136px; */
                 /* border:1px solid  #11C48C; */
                 background-color: #ffffff;
@@ -476,7 +475,7 @@ input, textarea {
     }
     #banco-dado {
         width: 348px !important;
-        height: 655px !important;
+        height: 665px !important;
 
         & .container {
             & .box-text-banco {
