@@ -65,6 +65,39 @@ function saveData() {
         icon: "success",
         button: "Ok"
     });
+
+    // Supondo que esses dados sejam retornados do console ou de algum lugar
+    const dataFromConsole = {
+        date: "2025-03-03",
+        startTime: "09:52",
+        endTime: "11:52",
+        totalTime: "2h 0m",
+        notes: "Testando o tamanho do texto para o motivo das horas extras"
+    };
+
+    // Acessar o container onde você deseja adicionar os dados
+    const container = document.querySelector('.container .row'); // A linha dentro do container
+
+    // Criar um novo box de dados
+    const newBox = document.createElement('div');
+    newBox.classList.add('col-12', 'col-md-6', 'col-lg-6');
+
+    newBox.innerHTML = `
+        <div class="box-text-banco">
+            <p>dia: ${dataFromConsole.date}</p>
+            <p>Horario de Entrada: ${dataFromConsole.startTime}</p>
+            <p>Horario de Saída: ${dataFromConsole.endTime}</p>
+            <div class="motivo">
+                <p>Motivo:</p>
+                <span>${dataFromConsole.notes}</span>
+            </div>
+            <p>Total de HORAS do dia: ${dataFromConsole.totalTime}</p>
+        </div>
+    `;
+
+    // Adicionar o novo box no container
+    container.appendChild(newBox);
+
 }
 
 
