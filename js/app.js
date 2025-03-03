@@ -111,18 +111,3 @@ document.getElementById('home').addEventListener('click', () => {
     hamburBtn.style.display="flex";
     iconSapn.innerHTML = '';
 });
-
-
-// document.querySelector('#banco-ancora').addEventListener('click', () => {
-//     // Apenas exibe quando clicar
-//     document.getElementById('banco-dado').style.display = "block";
-//     document.querySelector('.main').style.display = "none";
-//     console.log("Exibindo Banco de Dados");  // Para testar o clique
-// });
-
-// document.getElementById('home').addEventListener('click', () => {
-//     // Verifique se está retornando corretamente
-//     document.getElementById('banco-dado').style.display = "none";
-//     document.querySelector('.main').style.display = "block";
-//     console.log("Retornando à página inicial");  // Para testar o clique
-// });
