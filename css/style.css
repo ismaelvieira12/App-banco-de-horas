@@ -302,6 +302,7 @@ body {
         & .container{
             /* background-color: #1E917C; */
             width: 100%;
+            overflow-x: hidden; /* Evita scroll horizontal */
             
             & .box-text-banco{
                 /* height: 136px; */
