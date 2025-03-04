@@ -314,12 +314,14 @@ body {
                     & .text-info{
                         display: flex;
                         justify-content: space-between;
-                        margin-right: 5px;
+                        /* margin-right: 5px; */
                         border-bottom: 1px solid #ffffff;
 
+                        background-color: #dd4c7a;
                         & span{
-                            background-color: #dd4c7a;
                             color: #ffffff;
+                            border-radius: 5px;
+
                         }
                     }
 
