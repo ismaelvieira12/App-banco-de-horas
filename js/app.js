@@ -1,4 +1,4 @@
-const dia = document.getElementById('date').valueAsDate = new Date().toLocaleDateString();
+document.getElementById('date').valueAsDate = new Date();
 // console.log(`dia:${dia.getDay()}/${dia.getMonth()}/${dia.getFullYear()}`);
 
 function calculateTotalTime() {
