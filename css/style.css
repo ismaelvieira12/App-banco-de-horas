@@ -20,11 +20,11 @@
 
 span{
     width: 55%;
-    background-color: #DD4C79;
+    background-color: #1f394a;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
-    color: #ffffff;
+    
 }
 
 body {
@@ -325,15 +325,6 @@ body {
                         justify-content: space-between;
                         padding: 2px 5px;
                         border-bottom: 1px solid #ffffff;
-                        
-                        /* & span{
-                            width: 55%;
-                            background-color: var(--cor-bord-btn);
-                            border-radius: 5px;
-                            color: #ffffff;
-                            text-align: center;
-                            font-weight: bold;
-                        } */
 
                         &:nth-child(1){
                             & span{
@@ -352,6 +343,7 @@ body {
                         padding: 5px 0px;
                         width: 97%;
                         height: 100%;
+                        max-height: 88px;
                         margin: auto;
                         border-radius: 5px;
     
@@ -366,6 +358,9 @@ body {
                             text-align: justify;
                             width: 100%;
                             padding: 0px 15px 0px 0px;
+                            word-wrap: break-word; 
+                            overflow-wrap: break-word; 
+                            white-space: normal;
                         }
                     }
                     & p{
