@@ -314,14 +314,20 @@ body {
                     & .text-info{
                         display: flex;
                         justify-content: space-between;
-                        padding: 5px;
+                        padding: 2px 5px;
                         border-bottom: 1px solid #ffffff;
                         
                         & span{
-                            border-radius: 5px;
+                            width: 55%;
                             background-color: var(--cor-bord-btn);
+                            border-radius: 5px;
                             color: #ffffff;
+                            text-align: center;
+                            font-weight: bold;
 
+                            &:nth-child(3){
+                                padding-bottom: 4px;
+                            }
                         }
                     }
 
