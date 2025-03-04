@@ -69,8 +69,15 @@ function saveData() {
 
     populandoData(savedData);
 }
+// .toLocaleDateString('pt-BR', {
+//     //Formatando a data para o formato brasileiro.toLocaleDateString('pt-BR', {
+//     day: '2-digit', // formata para dia
+//     month: '2-digit', // formata para mês
+//     year: 'numeric' // Formata para anos
+// });
 
 function populandoData(savedData){
+
     // Supondo que esses dados sejam retornados do console ou de algum lugar
     
     // Acessar o container onde você deseja adicionar os dados
