@@ -97,7 +97,7 @@ function populandoData(savedData){
                 <p>Motivo:</p>
                 <p class="text-motivo">${savedData[0].notes}</p>
             </div>
-            <p>Total de HORAS do dia: ${savedData[0].totalTime}</p>
+            <p>TOTAL: ${savedData[0].totalTime}</p>
         </div>
     `;
     
