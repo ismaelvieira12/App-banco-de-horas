@@ -324,9 +324,11 @@ body {
                             color: #ffffff;
                             text-align: center;
                             font-weight: bold;
+                        }
 
-                            &:nth-child(3){
-                                padding-bottom: 4px;
+                        &:nth-child(3){
+                            & span{
+                                margin-bottom: 2px;
                             }
                         }
                     }
