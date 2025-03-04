@@ -86,11 +86,11 @@ function populandoData(savedData){
                 <span>${savedData[0].date}</span>
             </div >
             <div class="text-info">
-                <p>Entrada:</p>
+                <p>ENTRADA:</p>
                 <span>${savedData[0].startTime}</span>
             </div>
             <div class="text-info">
-                <p>Saída:</p>
+                <p>SAÍDA:</p>
                 <span>${savedData[0].endTime}</span>
             </div>
             <div class="motivo">

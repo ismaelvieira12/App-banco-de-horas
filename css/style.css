@@ -314,13 +314,13 @@ body {
                     & .text-info{
                         display: flex;
                         justify-content: space-between;
-                        /* margin-right: 5px; */
+                        padding: 5px;
                         border-bottom: 1px solid #ffffff;
-
-                        background-color: #dd4c7a;
+                        
                         & span{
-                            color: #ffffff;
                             border-radius: 5px;
+                            background-color: var(--cor-bord-btn);
+                            color: #ffffff;
 
                         }
                     }
