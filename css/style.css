@@ -138,7 +138,6 @@ body {
             & .check{
                 display: flex;
                 flex-direction: column;
-                /* background-color: #fcfcfc; */
                 margin-top: 20px;
                 & .switch{
                     position: relative;
