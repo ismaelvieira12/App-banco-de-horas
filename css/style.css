@@ -24,7 +24,6 @@ span{
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
-    
 }
 
 body {
@@ -311,7 +310,7 @@ body {
             overflow-x: hidden; /* Evita scroll horizontal */
             
             & .col-12{
-                height: 200px;
+                height: 215px;
                 & .box-text-banco{
                     background-color: #ffffff;
                     border-radius: 5px;
