@@ -18,14 +18,6 @@
     --background-menu: #212226;
 }
 
-span{
-    width: 55%;
-    background-color: #1f394a;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-image: url('../background.jpg');
@@ -121,11 +113,11 @@ body {
             align-items: center;
             margin-top: 10px;
             
-            & label{
+            /* & label{
                 font-size: 18px;
                 font-weight: bold;
                 color: var(--cor_text_btn);
-            }
+            } */
 
             & #total-time{
                 display: flex;
@@ -141,6 +133,16 @@ body {
                 & h4{
                     font-size: 30px;
                     color: var(--background-btn);
+                }
+            }
+
+            & .check{
+                display: flex;
+                flex-direction: column;
+
+                & .switch{
+                    display: flex;
+
                 }
             }
         }
@@ -346,7 +348,15 @@ body {
                         max-height: 88px;
                         margin: auto;
                         border-radius: 5px;
-    
+                        
+                        & span{
+                            width: 55%;
+                            background-color: #1f394a;
+                            border-radius: 5px;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
                         & p{
                             margin-left: 5px;
                             font-weight: bold;
