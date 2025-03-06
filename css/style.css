@@ -163,11 +163,12 @@ body {
                         }
 
                         & input:checked + .check-button{
-                            background-color: #11C48C;
+                            background-color: #ffffff;
                         }
 
                         input:checked + .check-button::before{
-                            transform: translateX(20px);
+                            transform: translateX(21px);
+                            background-color: #DD4C79;
                         }
 
                         & .check-button{

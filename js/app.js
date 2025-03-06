@@ -36,8 +36,20 @@ function saveData() {
     const endTime = document.getElementById('end-time').value;
     const totalTime = document.getElementById('total-time').innerText.trim(); // o innerText.trim() serve para pegar os dados da div ou span
     const notes = document.getElementById('notes').value;
-    
-    if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
+    const input50 = document.getElementById('horas50');
+    const input100 = document.getElementById('horas100');
+
+    if(input50.checked && input100.checked){
+        swal({
+            title: "Erro!",
+            text: "So pode selecionar um tipo de hora extra '50% OU 100%'.",
+            icon: "error",
+            button: "Voltar",
+        });
+        return;
+    }
+
+    if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === ""|| !input50.checked && !input100.checked) {
         swal({
             title: "Erro!",
             text: "Por favor, preencha os horários corretamente.",
@@ -160,3 +172,7 @@ document.getElementById('home').addEventListener('click', () => {
     hamburBtn.style.display="flex";
     iconSapn.innerHTML = '';
 });
+
+
+// const input = document.getElementById('horas50');
+
