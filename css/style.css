@@ -191,7 +191,9 @@ body {
                                 height: 15px;
                                 background-color: #ffffff;
                                 border-radius: 50%;
-                                margin-left: 2px;
+                                top: -0.5px;
+                                left: 2px;
+                                bottom: 1px;
                                 transition: .4s all ease;
                             }
                         }
@@ -505,6 +507,21 @@ input, textarea {
     }
 }
 
+@media (max-width: 375px){
+    & .total-time {
+        flex-direction: column;
+        & .check{
+            & .check-text{
+                font-size: 12px;
+            }
+
+            & .check-button::before{
+                top: -.5px;
+            }
+        }
+    }
+}
+
 @media (max-width: 884px) { 
     .main {
         width: 80% !important; /* Mantém o layout desejado */
@@ -520,6 +537,15 @@ input, textarea {
     .data-horas .horas {
         width: 100%;
     }
+
+    & .total-time{
+        & .check{
+            & .check-button::before{
+                top: -0.5px;
+            }
+        }
+    }
+
     #banco-dado {
         width: 500px !important;
         max-width: 500px;
@@ -554,8 +580,14 @@ input, textarea {
         }
         & .total-time{
             width: 100%;
-            & label{
-                font-size: 15px;
+            & .check{
+                & .check-text{
+                    font-size: 12px;
+                }
+
+                & .check-button::before{
+                    top: -0.5px;
+                }
             }
         }
     
@@ -607,3 +639,4 @@ input, textarea {
     }
     
 }
+
