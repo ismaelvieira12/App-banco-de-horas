@@ -162,6 +162,10 @@ body {
                             opacity: 0;
                         }
 
+                        & input:checked + .check-button{
+                            background-color: #11C48C;
+                        }
+
                         & .check-button{
                             position: absolute;
                             top: 0;
@@ -174,7 +178,7 @@ body {
                             align-items: center;
                             border-radius: 20px;
                             background-color: #DD4C79;
-
+/* 
                             &::after{
                                 content: "";
                                 position: relative;
@@ -183,6 +187,18 @@ body {
                                 background-color: #ffffff;
                                 border-radius: 50%;
                                 margin-left: 2px;
+                                display: none;
+                            } */
+
+                            &::before{
+                                content: "";
+                                position: relative;
+                                width: 15px;
+                                height: 15px;
+                                background-color: #ffffff;
+                                border-radius: 50%;
+                                margin-left: 2px;
+                                transition: .4s all ease;
                             }
                         }
                         
