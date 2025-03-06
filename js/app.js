@@ -93,6 +93,17 @@ function saveData() {
     });    
 
     populandoData(savedData);
+
+
+    // 🔹 LIMPAR OS CAMPOS APÓS O SUBMIT 🔹
+    document.getElementById('date').valueAsDate = new Date(); // Reseta para a data atual
+    document.getElementById('start-time').value = "";
+    document.getElementById('end-time').value = "";
+    document.getElementById('total-time').innerHTML = ""; // Zera a exibição do total de horas
+    document.getElementById('notes').value = "";
+    input50.checked = false;
+    input100.checked = false;
+    
 }
 // .toLocaleDateString('pt-BR', {
 //     //Formatando a data para o formato brasileiro.toLocaleDateString('pt-BR', {
@@ -188,4 +199,3 @@ document.getElementById('home').addEventListener('click', () => {
 
 
 // const input = document.getElementById('horas50');
-
