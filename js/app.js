@@ -49,7 +49,20 @@ function saveData() {
         return;
     }
 
-    if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === ""|| !input50.checked && !input100.checked) {
+
+    //Validando que pelo menos um dos horários estejam selecionados
+    if( !input50.checked && !input100.checked){
+        swal({
+            title: "Erro!",
+            text: "Selecione pelo menos um tipo de hora extra '50% OU 100%'.",
+            icon: "error",
+            button: "OK",
+        });
+        return;
+    }
+
+
+    if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
         swal({
             title: "Erro!",
             text: "Por favor, preencha os horários corretamente.",
