@@ -40,31 +40,9 @@ function saveData() {
     const notes = document.getElementById('notes').value;
     const input100 = document.getElementById('horas100');
 
+    //validando se é hora extra de 50% ou 100%
     const tipo = input100.checked ? "100%" : "50%";
-    console.log(tipo);
-    // //Validando que somente um dos dois checkbox esteja selecionados
-    // if(input50.checked && input100.checked){
-    //     swal({
-    //         title: "Erro!",
-    //         text: "So pode selecionar um tipo de hora extra '50% OU 100%'.",
-    //         icon: "error",
-    //         button: "Voltar",
-    //     });
-    //     return;
-    // }
-
-
-    // //Validando que pelo menos um dos horários estejam selecionados
-    // if( !input50.checked && !input100.checked){
-    //     swal({
-    //         title: "Erro!",
-    //         text: "Selecione pelo menos um tipo de hora extra '50% OU 100%'.",
-    //         icon: "error",
-    //         button: "OK",
-    //     });
-    //     return;
-    // }
-
+    
     //Validando que todos os dados necessários estejam preenchidos
     if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
         swal({
@@ -153,7 +131,7 @@ function populandoData(savedData){
                 <span>${item.endTime}</span>
             </div>
             <div class="motivo">
-                <p>Motivo:</p>
+                <p>Motivo:</p> <span class="tipo">${item.tipo}</span>
                 <p class="text-motivo">${item.notes}</p>
             </div>
             <div class="text-info">
