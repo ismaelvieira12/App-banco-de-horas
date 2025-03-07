@@ -38,10 +38,10 @@ function saveData() {
     const endTime = document.getElementById('end-time').value;
     const totalTime = document.getElementById('total-time').innerText.trim(); // o innerText.trim() serve para pegar os dados da div ou span
     const notes = document.getElementById('notes').value;
-    const input50 = document.getElementById('horas50');
     const input100 = document.getElementById('horas100');
 
-    // console.log(today);
+    const tipo = input100.checked ? "100%" : "50%";
+    console.log(tipo);
     // //Validando que somente um dos dois checkbox esteja selecionados
     // if(input50.checked && input100.checked){
     //     swal({
@@ -98,7 +98,7 @@ function saveData() {
         return;
     }
 
-    const entry = { date, startTime, endTime, totalTime, notes };
+    const entry = { date, startTime, endTime, totalTime, notes, tipo };
     savedData.push(entry);
     console.log("Dados salvos:", savedData);
     swal({
@@ -116,7 +116,6 @@ function saveData() {
     document.getElementById('end-time').value = "";
     document.getElementById('total-time').innerHTML = ""; // Zera a exibição do total de horas
     document.getElementById('notes').value = "";
-    input50.checked = false;
     input100.checked = false;
     
 }
