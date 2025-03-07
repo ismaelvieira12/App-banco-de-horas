@@ -383,7 +383,6 @@ body {
                         display: flex;
                         justify-content: space-between;
                         padding: 2px 5px;
-                        border-bottom: 1px solid #ffffff;
 
                         & span{
                             width: 55%;

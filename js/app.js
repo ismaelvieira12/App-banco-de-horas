@@ -1,4 +1,4 @@
-document.getElementById('date').valueAsDate = new Date();
+const today = document.getElementById('date').valueAsDate = new Date();
 // console.log(`dia:${dia.getDay()}/${dia.getMonth()}/${dia.getFullYear()}`);
 
 function calculateTotalTime() {
@@ -31,6 +31,8 @@ document.getElementById('end-time').addEventListener('input', calculateTotalTime
 let savedData = [];
 
 function saveData() {
+    const today = new Date().toISOString().split('T')[0];
+    
     const date = document.getElementById('date').value;
     const startTime = document.getElementById('start-time').value;
     const endTime = document.getElementById('end-time').value;
@@ -39,6 +41,8 @@ function saveData() {
     const input50 = document.getElementById('horas50');
     const input100 = document.getElementById('horas100');
 
+    console.log(today);
+    //Validando que somente um dos dois checkbox esteja selecionados
     if(input50.checked && input100.checked){
         swal({
             title: "Erro!",
@@ -61,7 +65,7 @@ function saveData() {
         return;
     }
 
-
+    //Validando que todos os dados necessários estejam preenchidos
     if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
         swal({
             title: "Erro!",
@@ -72,6 +76,7 @@ function saveData() {
         return;
     }
     
+    //Validando se já existe valores cadatrados com a data atual
     if (savedData.some(entry => entry.date === date)) {
         swal({
             title: "Atenção!",
@@ -82,7 +87,17 @@ function saveData() {
         return;
     }
     
-    
+    //Validando se a Data escolhida não é maior do que a data atual *(Não tem como fazer uma hora extra de amanhã se ainda estamos no hoje!)
+    if(date > today){
+        swal({
+            title: "Data Incorreta!",
+            text: "Não é possível registrar dados para uma data futura.",
+            icon: "error",
+            button: "Voltar"
+        });
+        return;
+    }
+
     const entry = { date, startTime, endTime, totalTime, notes };
     savedData.push(entry);
     console.log("Dados salvos:", savedData);
