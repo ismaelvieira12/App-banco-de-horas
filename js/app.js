@@ -32,7 +32,7 @@ let savedData = [];
 
 function saveData() {
     const today = new Date().toISOString().split('T')[0];
-    
+
     const date = document.getElementById('date').value;
     const startTime = document.getElementById('start-time').value;
     const endTime = document.getElementById('end-time').value;
