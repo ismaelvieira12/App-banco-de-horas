@@ -54,16 +54,16 @@ function saveData() {
     // }
 
 
-    //Validando que pelo menos um dos horários estejam selecionados
-    if( !input50.checked && !input100.checked){
-        swal({
-            title: "Erro!",
-            text: "Selecione pelo menos um tipo de hora extra '50% OU 100%'.",
-            icon: "error",
-            button: "OK",
-        });
-        return;
-    }
+    // //Validando que pelo menos um dos horários estejam selecionados
+    // if( !input50.checked && !input100.checked){
+    //     swal({
+    //         title: "Erro!",
+    //         text: "Selecione pelo menos um tipo de hora extra '50% OU 100%'.",
+    //         icon: "error",
+    //         button: "OK",
+    //     });
+    //     return;
+    // }
 
     //Validando que todos os dados necessários estejam preenchidos
     if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
