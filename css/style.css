@@ -370,11 +370,12 @@ body {
             overflow-x: hidden; /* Evita scroll horizontal */
             
             & .col-12{
-                height: 215px;
+                height: 225px;
                 & .box-text-banco{
                     background-color: #ffffff;
                     border-radius: 5px;
                     height: 100%;
+                    padding: 5px 0px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
