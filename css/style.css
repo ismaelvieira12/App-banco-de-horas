@@ -415,9 +415,12 @@ body {
                         
 
                         & p{
+                            display: flex;
+                            background-color: #DD4C79;
                             margin-left: 5px;
                             font-weight: bold;
-                            color: #1F394A;
+                            /* color: #1F394A; */
+                            color: #fff;
                         }
                         & .text-motivo{
                             font-weight: normal;

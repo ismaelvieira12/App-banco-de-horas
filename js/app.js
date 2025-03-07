@@ -131,7 +131,10 @@ function populandoData(savedData){
                 <span>${item.endTime}</span>
             </div>
             <div class="motivo">
-                <p>Motivo:</p> <span class="tipo">${item.tipo}</span>
+                <p>
+                    <span>Motivo:</span> 
+                    <span class="tipo">${item.tipo}</span>
+                </p>
                 <p class="text-motivo">${item.notes}</p>
             </div>
             <div class="text-info">
