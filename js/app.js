@@ -171,7 +171,7 @@ hamburBtn.addEventListener('click', () => {
     iconSapn.appendChild(h5);
 });
 
-closedMenu.addEventListener('click', () => {;
+closedMenu.addEventListener('click', () => {
     closedMenu.style.display="none";
     boxMenu.classList.remove('box-menu');
     hamburBtn.style.display="flex";
