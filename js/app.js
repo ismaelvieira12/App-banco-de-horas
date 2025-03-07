@@ -123,6 +123,10 @@ function populandoData(savedData){
     const newBox = document.createElement('div');
     newBox.classList.add('col-12', 'col-md-6', 'col-lg-6');
     
+
+    const divBoxTextBanco = document.querySelector('.box-text-banco');
+    divBoxTextBanco.classList.add("box-text-banco");
+
     newBox.innerHTML = `
         <div class="box-text-banco">
             <div class="text-info">
