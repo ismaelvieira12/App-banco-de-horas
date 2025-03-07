@@ -123,37 +123,34 @@ function populandoData(savedData){
     const newBox = document.createElement('div');
     newBox.classList.add('col-12', 'col-md-6', 'col-lg-6');
     
-
-    const divBoxTextBanco = document.querySelector('.box-text-banco');
-    divBoxTextBanco.classList.add("box-text-banco");
-
-    newBox.innerHTML = `
+    savedData.forEach(item =>{
+        newBox.innerHTML = `
         <div class="box-text-banco">
             <div class="text-info">
                 <p>DIA:</p>
-                <span>${savedData[0].date}</span>
+                <span>${item.date}</span>
             </div >
             <div class="text-info">
                 <p>ENTRADA:</p>
-                <span>${savedData[0].startTime}</span>
+                <span>${item.startTime}</span>
             </div>
             <div class="text-info">
                 <p>SAÍDA:</p>
-                <span>${savedData[0].endTime}</span>
+                <span>${item.endTime}</span>
             </div>
             <div class="motivo">
                 <p>Motivo:</p>
-                <p class="text-motivo">${savedData[0].notes}</p>
+                <p class="text-motivo">${item.notes}</p>
             </div>
             <div class="text-info">
                 <p>TOTAL:</p>
-                <span> ${savedData[0].totalTime}</span>
+                <span> ${item.totalTime}</span>
             </div>
-        </div>
-    `;
+        </div>`
     
-    // Adicionar o novo box no container
-    container.appendChild(newBox);
+        // Adicionar o novo box no container
+        container.appendChild(newBox)
+    });
 }
 
 
