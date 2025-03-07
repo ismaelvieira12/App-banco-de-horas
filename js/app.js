@@ -1,6 +1,6 @@
 const today = document.getElementById('date').valueAsDate = new Date();
-// console.log(`dia:${dia.getDay()}/${dia.getMonth()}/${dia.getFullYear()}`);
 
+// Função para calcular total de horas
 function calculateTotalTime() {
     const startTime = document.getElementById('start-time').value;
     const endTime = document.getElementById('end-time').value;
@@ -18,8 +18,8 @@ function calculateTotalTime() {
             document.getElementById('total-time').innerHTML = `<h4> ${hours}h ${minutes}m </h4>`;
         } else {
             const texterror = document.getElementById('total-time');
-            texterror.style.color="#FA4000";
-            texterror.style.font='bold';
+            texterror.style.color = "#FA4000";
+            texterror.style.font = 'bold';
             texterror.innerHTML = "Horário inválido";
         }
     }
@@ -28,22 +28,24 @@ function calculateTotalTime() {
 document.getElementById('start-time').addEventListener('input', calculateTotalTime);
 document.getElementById('end-time').addEventListener('input', calculateTotalTime);
 
-let savedData = [];
+// 🔹 Recupera os dados salvos no localStorage (se houver)
+let savedData = JSON.parse(localStorage.getItem("bancoDeHoras")) || [];
 
+// 🔹 Função para salvar os dados
 function saveData() {
     const today = new Date().toISOString().split('T')[0];
 
     const date = document.getElementById('date').value;
     const startTime = document.getElementById('start-time').value;
     const endTime = document.getElementById('end-time').value;
-    const totalTime = document.getElementById('total-time').innerText.trim(); // o innerText.trim() serve para pegar os dados da div ou span
+    const totalTime = document.getElementById('total-time').innerText.trim();
     const notes = document.getElementById('notes').value;
     const input100 = document.getElementById('horas100');
 
-    //validando se é hora extra de 50% ou 100%
+    // Validando se é hora extra de 50% ou 100%
     const tipo = input100.checked ? "100%" : "50%";
-    
-    //Validando que todos os dados necessários estejam preenchidos
+
+    // Validando que todos os dados necessários estejam preenchidos
     if (!startTime || !endTime || totalTime === "Horário inválido" || totalTime === "") {
         swal({
             title: "Erro!",
@@ -54,7 +56,7 @@ function saveData() {
         return;
     }
     
-    //Validando se já existe valores cadatrados com a data atual
+    // Validando se já existe um registro para essa data
     if (savedData.some(entry => entry.date === date)) {
         swal({
             title: "Atenção!",
@@ -65,8 +67,8 @@ function saveData() {
         return;
     }
     
-    //Validando se a Data escolhida não é maior do que a data atual *(Não tem como fazer uma hora extra de amanhã se ainda estamos no hoje!)
-    if(date > today){
+    // Validando se a Data escolhida não é maior do que a data atual
+    if (date > today) {
         swal({
             title: "Data Incorreta!",
             text: "Não é possível registrar dados para uma data futura.",
@@ -76,52 +78,49 @@ function saveData() {
         return;
     }
 
+    // Criando entrada de dados
     const entry = { date, startTime, endTime, totalTime, notes, tipo };
     savedData.push(entry);
+
+    // 🔹 Atualiza o localStorage com os novos dados
+    localStorage.setItem("bancoDeHoras", JSON.stringify(savedData));
+
     console.log("Dados salvos:", savedData);
+
     swal({
         title: "Dados salvos com sucesso!",
         icon: "success",
         button: "Ok"
-    });    
+    });
 
-    populandoData(savedData);
+    // Atualiza a interface com os novos dados
+    populandoData();
+    // formatData(date);
 
-
-    // 🔹 LIMPAR OS CAMPOS APÓS O SUBMIT 🔹
-    document.getElementById('date').valueAsDate = new Date(); // Reseta para a data atual
+    // 🔹 Limpa os campos após o submit
+    document.getElementById('date').valueAsDate = new Date();
     document.getElementById('start-time').value = "";
     document.getElementById('end-time').value = "";
-    document.getElementById('total-time').innerHTML = ""; // Zera a exibição do total de horas
+    document.getElementById('total-time').innerHTML = "";
     document.getElementById('notes').value = "";
     input100.checked = false;
-    
 }
-// .toLocaleDateString('pt-BR', {
-//     //Formatando a data para o formato brasileiro.toLocaleDateString('pt-BR', {
-//     day: '2-digit', // formata para dia
-//     month: '2-digit', // formata para mês
-//     year: 'numeric' // Formata para anos
-// });
 
-function populandoData(savedData){
+// 🔹 Função para exibir os dados no HTML
+function populandoData() {
+    const container = document.querySelector('.container .row');
+    container.innerHTML = ""; // Evita duplicações ao atualizar
 
-    // Supondo que esses dados sejam retornados do console ou de algum lugar
-    
-    // Acessar o container onde você deseja adicionar os dados
-    const container = document.querySelector('.container .row'); // A linha dentro do container
-    
-    // Criar um novo box de dados
-    const newBox = document.createElement('div');
-    newBox.classList.add('col-12', 'col-md-6', 'col-lg-6');
-    
-    savedData.forEach(item =>{
+    savedData.forEach(item => {
+        const newBox = document.createElement('div');
+        newBox.classList.add('col-12', 'col-md-6', 'col-lg-6');
+
         newBox.innerHTML = `
         <div class="box-text-banco">
             <div class="text-info">
                 <p>DIA:</p>
-                <span>${item.date}</span>
-            </div >
+                <span>${formatData(item.date)}</span>
+            </div>
             <div class="text-info">
                 <p>ENTRADA:</p>
                 <span>${item.startTime}</span>
@@ -139,28 +138,36 @@ function populandoData(savedData){
             </div>
             <div class="text-info">
                 <p>TOTAL:</p>
-                <span> ${item.totalTime}</span>
+                <span>${item.totalTime}</span>
             </div>
-        </div>`
-    
-        // Adicionar o novo box no container
-        container.appendChild(newBox)
+        </div>`;
+        
+        container.appendChild(newBox);
     });
 }
 
+// formatando as datas para aparecerem no modelo brasileiro
+function formatData(date){
+    const [ano, mes, dia] = date.split('-'); // Divide "aaaa-mm-dd"
+    return `${dia}/${mes}/${ano}`; // Retorna "dd/mm/aaaa"
+}
 
-// Populando o HTML
+// 🔹 Carrega os dados ao iniciar a página
+document.addEventListener("DOMContentLoaded", populandoData);
+
+// Populando o HTML (Menu)
 const hamburBtn = document.querySelector('.menu-hamburguer');
 const boxMenu = document.querySelector('.menu-inline');
 const closedMenu = document.querySelector('.x');
 const menuEl = document.querySelector('.menu');
 const iconSapn = document.querySelector('.bd');
 const h5 = document.createElement('p');
+
 hamburBtn.addEventListener('click', () => {
     menuEl.classList.add('menu-speed');
     boxMenu.classList.add('box-menu');
-    hamburBtn.style.display='none';
-    closedMenu.style.display="block";
+    hamburBtn.style.display = 'none';
+    closedMenu.style.display = "block";
 
     iconSapn.innerHTML = '<i class="fa-solid fa-database"></i>';
     h5.innerText = "Banco de horas";
@@ -168,30 +175,23 @@ hamburBtn.addEventListener('click', () => {
 });
 
 closedMenu.addEventListener('click', () => {
-    closedMenu.style.display="none";
+    closedMenu.style.display = "none";
     boxMenu.classList.remove('box-menu');
-    hamburBtn.style.display="flex";
+    hamburBtn.style.display = "flex";
     iconSapn.innerHTML = '';
-})
-
-
-
+});
 
 // Direcionando para a página de banco de horas
-
 document.querySelector('#banco-ancora').addEventListener('click', () => {
-    document.getElementById('banco-dado').style.display="block";
-    document.querySelector('.main').style.display="none";
+    document.getElementById('banco-dado').style.display = "block";
+    document.querySelector('.main').style.display = "none";
 });
 
-// Criando uma ancora para voltar para Página inicial
+// Criando um botão para voltar para Página inicial
 document.getElementById('home').addEventListener('click', () => {
-    document.getElementById('banco-dado').style.display="none";
-    document.querySelector('.main').style.display="block";
+    document.getElementById('banco-dado').style.display = "none";
+    document.querySelector('.main').style.display = "block";
     boxMenu.classList.remove('box-menu');
-    hamburBtn.style.display="flex";
+    hamburBtn.style.display = "flex";
     iconSapn.innerHTML = '';
 });
-
-
-// const input = document.getElementById('horas50');
