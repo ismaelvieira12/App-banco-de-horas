@@ -41,17 +41,17 @@ function saveData() {
     const input50 = document.getElementById('horas50');
     const input100 = document.getElementById('horas100');
 
-    console.log(today);
-    //Validando que somente um dos dois checkbox esteja selecionados
-    if(input50.checked && input100.checked){
-        swal({
-            title: "Erro!",
-            text: "So pode selecionar um tipo de hora extra '50% OU 100%'.",
-            icon: "error",
-            button: "Voltar",
-        });
-        return;
-    }
+    // console.log(today);
+    // //Validando que somente um dos dois checkbox esteja selecionados
+    // if(input50.checked && input100.checked){
+    //     swal({
+    //         title: "Erro!",
+    //         text: "So pode selecionar um tipo de hora extra '50% OU 100%'.",
+    //         icon: "error",
+    //         button: "Voltar",
+    //     });
+    //     return;
+    // }
 
 
     //Validando que pelo menos um dos horários estejam selecionados
