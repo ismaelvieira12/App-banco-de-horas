@@ -416,11 +416,12 @@ body {
 
                         & p{
                             display: flex;
-                            background-color: #DD4C79;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-right: 8px;
                             margin-left: 5px;
                             font-weight: bold;
-                            /* color: #1F394A; */
-                            color: #fff;
+                            color: #1F394A;
                         }
                         & .text-motivo{
                             font-weight: normal;
